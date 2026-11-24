@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Font sizes until SystemUI sends its own (onFontSettingChanged). -->
+    <dimen name="pc_clock_large_size">150dp</dimen>
+    <dimen name="pc_clock_small_size">48dp</dimen>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="clock_bignum_name">Números grandes</string>
+    <string name="clock_bignum_description">Mostrador analógico com números grandes</string>
+    <string name="clock_calligraphy_name">Caligrafia</string>
+    <string name="clock_calligraphy_description">Números em itálico com serifa</string>
+    <string name="clock_growth_name">Estêncil</string>
+    <string name="clock_growth_description">Números altos vazados</string>
+    <string name="clock_inflate_name">Inflado</string>
+    <string name="clock_inflate_description">Números redondos sobrepostos</string>
+    <string name="clock_metro_name">Metrô</string>
+    <string name="clock_metro_description">Números em linhas de metrô</string>
+    <string name="clock_numoverlap_name">Sobreposto</string>
+    <string name="clock_numoverlap_description">Números grandes sobrepostos em duas cores</string>
+    <string name="clock_weather_name">Clima</string>
+    <string name="clock_weather_description">Hora com a data e o clima</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="clock_bignum_name">Big numbers</string>
+    <string name="clock_bignum_description">Analog dial with large numbers</string>
+    <string name="clock_calligraphy_name">Calligraphy</string>
+    <string name="clock_calligraphy_description">Italic serif digits</string>
+    <string name="clock_growth_name">Stencil</string>
+    <string name="clock_growth_description">Tall digits with stencil cuts</string>
+    <string name="clock_inflate_name">Inflated</string>
+    <string name="clock_inflate_description">Round overlapping digits</string>
+    <string name="clock_metro_name">Transit</string>
+    <string name="clock_metro_description">Digits drawn as transit lines</string>
+    <string name="clock_numoverlap_name">Overlap</string>
+    <string name="clock_numoverlap_description">Large overlapping digits in two colors</string>
+    <string name="clock_weather_name">Weather</string>
+    <string name="clock_weather_description">Time with the date and the weather</string>
+</resources>

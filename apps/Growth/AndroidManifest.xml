@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.systemui.clocks.growth">
+
+    <uses-permission android:name="com.android.systemui.permission.PLUGIN" />
+
+    <application android:label="@string/clock_growth_name">
+        <service
+            android:name="org.lineageos.pcclocks.GrowthClockProvider"
+            android:directBootAware="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.systemui.action.PLUGIN_CLOCK_PROVIDER" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

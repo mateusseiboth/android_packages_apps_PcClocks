@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# The plugin service SystemUI instantiates by name, and the annotations it reads from it.
+-keepattributes Signature,*Annotation*
+-keep class org.lineageos.pcclocks.*ClockProvider { *; }
+-keepclassmembers class org.lineageos.pcclocks.R$* { public static <fields>; }
+
+# Compose (used by SystemUIClocks-CommonLib's face layout): keep what R8 would otherwise assume
+# returns null.
+-keep !enum androidx.compose.**Scope { *; }
+-keep !enum androidx.compose.runtime.** {
+    *** startRestartGroup(...);
+    *** getApplier(...);
+}

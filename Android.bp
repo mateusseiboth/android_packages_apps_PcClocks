@@ -1,0 +1,95 @@
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// Faces, controllers and the plugin services of every clock style.
+android_library {
+    name: "PcClocksLib",
+    manifest: "lib/AndroidManifest.xml",
+    srcs: ["lib/src/**/*.kt"],
+    resource_dirs: ["lib/res"],
+    use_resource_processor: true,
+    libs: ["SystemUIPluginLib"],
+    static_libs: ["SystemUIClocks-CommonLib"],
+    kotlincflags: ["-Xjvm-default=all"],
+    min_sdk_version: "current",
+    system_ext_specific: true,
+    platform_apis: true,
+}
+
+// One APK per style: SystemUI's ClockRegistry and ThemePicker know each clock by its package.
+java_defaults {
+    name: "PcClocks-defaults",
+    libs: ["SystemUIPluginLib"],
+    static_libs: ["PcClocksLib"],
+    min_sdk_version: "current",
+    use_resource_processor: true,
+    system_ext_specific: true,
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    optimize: {
+        enabled: true,
+        shrink_resources: true,
+        optimized_shrink_resources: true,
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
+
+android_app {
+    name: "PcClocks-BigNum",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/BigNum/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-Calligraphy",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/Calligraphy/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-Growth",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/Growth/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-Inflate",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/Inflate/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-Metro",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/Metro/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-NumOverlap",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/NumOverlap/AndroidManifest.xml",
+}
+
+android_app {
+    name: "PcClocks-Weather",
+    defaults: ["PcClocks-defaults"],
+    manifest: "apps/Weather/AndroidManifest.xml",
+}
+
+// Plain JVM tests of the clock model (time, hands, tones, glyphs, weather texts).
+java_test_host {
+    name: "PcClocksHostTests",
+    srcs: [
+        "lib/src/org/lineageos/pcclocks/model/*.kt",
+        "tests/host/src/**/*.kt",
+    ],
+    static_libs: ["junit"],
+    test_options: {
+        unit_test: true,
+    },
+}
