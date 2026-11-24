@@ -49,3 +49,10 @@ tests/run_host_tests.sh          # without a build (tree's kotlinc, JUnit jars f
 ```
 
 See `DESIGN.md` for how each face is built.
+
+## Credits
+
+- [LineageOS](https://lineageos.org) ([GitHub](https://github.com/LineageOS)): the base system and build this is part of.
+- [Android Open Source Project](https://source.android.com): the platform, its APIs and build system. The clocks implement SystemUI's clock plugin interfaces.
+
+Thanks to everyone behind these projects. Files taken from them keep their original licenses and copyright notices.
