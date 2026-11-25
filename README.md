@@ -50,6 +50,14 @@ tests/run_host_tests.sh          # without a build (tree's kotlinc, JUnit jars f
 
 See `DESIGN.md` for how each face is built.
 
+## Screenshots
+
+Taken in QEMU/KVM at 1920x1080 from the live ISO.
+
+![Lock screen with the large clock.](docs/screenshots/15-lock-screen.png)
+
+Lock screen with the large clock.
+
 ## Credits
 
 - [LineageOS](https://lineageos.org) ([GitHub](https://github.com/LineageOS)): the base system and build this is part of.
